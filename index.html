@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s p i n n n n n n n n</title>
+</head>
+<body>
+    <style>
+        #container {
+            perspective: 1200px;
+            margin: 1rem auto;
+            width: 200px;
+        }
+
+        #spinner {
+            animation-name: spinner;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 0.9s;
+            transform-style: preserve-3d;
+            margin-top: 40px;
+            width: 128px;
+            height: 128px;
+        }
+
+        #top{
+            position: absolute;
+            z-index: 10;
+            left: 0px;
+            width: 200px;
+        }
+
+        #bottom {
+            position: absolute;
+            left: 0px;
+            z-index: -1;
+            width: 200px;
+        }
+
+        @keyframes spinner {
+            from {
+                transform: rotateX(60deg) rotateZ(0deg);
+            }
+            to {
+                transform: rotateX(60deg) rotateZ(-360deg);
+            }
+        }
+    </style>
+    <div id="container">
+        <img src="./hand_top.png" id="top">
+        <img src="./YOUR_IMAGE.png" id="spinner">
+        <img src="./hand_bottom.png" id="bottom">
+    </div>
+</body>
+</html>
